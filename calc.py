@@ -47,21 +47,29 @@ def secant(x):
 def cosecant(x):
     return mpmath.csc(x)
 
+def isinfinite(x):
+    return mpmath.isinf(x)
+
+def isNaN(x):
+    return mpmath.isnan(x)
+
 print("Select an operation:\n")
-multiline_str = ("\n   addition\n   subtraction\n   multiplication\n   division\n"
-   "   exponents\n   square root\n   nth root\n   logarithm\n   modulo\n"
-   "   sine\n   cosine\n   tangent\n   cotangent\n   secant\n   cosecant\n")
+multiline_str = ("\n   addition (+)\n   subtraction (-)\n   multiplication (*)\n   division (/)\n"
+   "   exponents (^)\n   square root (sqrt)\n   nth root (nthroot)\n   logarithm (log)\n   modulo (mod)\n"
+   "   sine (sin)\n   cosine (cos)\n   tangent (tan)\n   cotangent (cot)\n   secant (sec)\n   cosecant (csc)\n"
+   "   is infinite (isinf)\n   is not-a-number (isNaN)")
 
 print(multiline_str)
 
 while True:
     # User input
-    choice = input("\nEnter operation's name: ")
+    print("\n")
+    choice = input("Enter operation's name: ")
 
 
     #2 choice ###################################
     # Check if choice is one of the options
-    if choice in ("addition", "subtraction", "multiplication", "division", "exponents", "nth root", "logarithm", "modulo"):
+    if choice in ("+", "-", "*", "/", "^", "nthroot", "log", "mod"):
         x = str(input("Enter first number: "))
         y = str(input("Enter second number: "))
 
@@ -75,35 +83,36 @@ while True:
         if y == "pi":
             y = float(math.pi)
         if y == "e":
-            x = float(math.e)
+            y = float(math.e)
         if y == "tau":
             y = float(math.tau)
+
 
         x = float(x)
         y = float(y)
 
-        if choice == "addition":
+        if choice == "+":
             print("\n ", x, "+", y, "=", add(x, y))
 
-        elif choice == "subtraction":
+        elif choice == "-":
             print("\n ", x, "-", y, "=", subtract(x, y))
 
-        elif choice == "multiplication":
+        elif choice == "*":
             print("\n ", x, "*", y, "=", multiply(x, y))
 
-        elif choice == "division":
+        elif choice == "/":
             print("\n ", x, "/", y, "=", divide(x, y))
 
-        elif choice == "exponents":
+        elif choice == "^":
             print("\n ", x, "^", y, "=", exponent(x, y))
 
-        elif choice == "nth root":
+        elif choice == "nthroot":
             print("\n ", "^", x, "√", y, "=", nthroot(x, y))
 
-        elif choice == "logarithm":
+        elif choice == "log":
             print("\n ", f'log({x} [, {y}]) = ', log(x, y)) #THANK YOU CAFF!!!
 
-        elif choice == "modulo":
+        elif choice == "mod":
             print("\n ", x, "%", y, "=", modulo(x, y))
 
         else:
@@ -111,29 +120,41 @@ while True:
 
 
 #1 choice ####################
-    if choice in ("square root", "sine", "cosine", "tangent", "cotangent", "secant", "cosecant"):
+    if choice in ("sqrt", "sin", "cos", "tan", "cot", "sec", "csc", "isinf", "isNaN"):
         x = float(input("Enter first number: "))
 
-        if choice == "square root":
+        if choice == "sqrt":
             print("\n ","√", x, "=", sqrt(x))
 
-        elif choice == "sine":
+        elif choice == "sin":
             print("\n ", f'sin({x}) = ', sine(x))
 
-        elif choice == "cosine":
+        elif choice == "cos":
             print("\n ", f'cos({x}) = ', cosine(x))
 
-        elif choice == "tangent":
+        elif choice == "tan":
             print("\n ", f'tan({x}) = ', tangent(x))
 
-        elif choice == "cotangent":
+        elif choice == "cot":
             print("\n ", f'cot({x}) = ', cotangent(x))
 
-        elif choice == "secant":
+        elif choice == "sec":
             print("\n ", f'sec({x}) = ', secant(x))
 
-        elif choice == "cosecant":
+        elif choice == "csc":
             print("\n ", f'csc({x}) = ', cosecant(x))
+
+        elif choice == "isinf":
+            print("\n ", f'isinf({x}) = ', isinfinite(x))
+
+        elif choice == "isNaN":
+            print("\n ", f'isNaN({x}) = ', isNaN(x))
 
         else:
             print("Invalid Input")
+
+            positive_infnity = float('inf')
+            print(positive_infnity)
+
+            negative_infnity = float('-inf')
+            print(negative_infnity)
