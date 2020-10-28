@@ -44,8 +44,15 @@ def cotangent(x):
 def secant(x):
     return mpmath.sec(x)
 
+def cosecant(x):
+    return mpmath.csc(x)
+
 print("Select an operation:\n")
-print("\n   addition\n   subtraction\n   multiplication\n   division\n   exponents\n   square root\n   nth root\n   logarithm\n   modulo\n   sine\n   cosine\n   tangent\n   cotangent\n   secant\n")
+multiline_str = ("\n   addition\n   subtraction\n   multiplication\n   division\n"
+   "   exponents\n   square root\n   nth root\n   logarithm\n   modulo\n"
+   "   sine\n   cosine\n   tangent\n   cotangent\n   secant\n   cosecant\n")
+
+print(multiline_str)
 
 
 while True:
@@ -65,8 +72,16 @@ while True:
         if y == "pi":
             y = float(math.pi)
 
-        x = float(x)
-        y = float(y)
+#        try:
+#            x = float(x)
+#        except:
+#            print("Your first number is invalid. Please enter a valid number.")
+#            x = str(input("Enter first number: "))
+#            y = float(y)
+#        except:
+#            print("Your first number is invalid. Please enter a valid number.")
+#            y = str(input("Enter second number: "))
+
 
         if choice == "addition":
             print(" ", x, "+", y, "=", add(x, y))
@@ -97,7 +112,7 @@ while True:
 
 
 #1 choice ####################
-    if choice in ("square root", "sine", "cosine", "tangent", "cotangent", "secant"):
+    if choice in ("square root", "sine", "cosine", "tangent", "cotangent", "secant", "cosecant"):
         x = float(input("Enter first number: "))
 
         if choice == "square root":
@@ -117,6 +132,9 @@ while True:
 
         elif choice == "secant":
             print(" ", f'sec({x}) = ', secant(x))
+
+        elif choice == "cosecant":
+            print(" ", f'csc({x}) = ', cosecant(x))
 
         else:
             print("Invalid Input")
