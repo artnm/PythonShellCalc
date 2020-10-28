@@ -18,7 +18,7 @@ tangent <br />
 cotangent <br />
 secant <br />
 cosecant <br />
-is infinity <br />
+is infinite <br />
 is not-a-number
 
 
