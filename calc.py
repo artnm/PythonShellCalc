@@ -45,12 +45,12 @@ def secant(x):
     return mpmath.sec(x)
 
 print("Select an operation:\n")
-print("   addition\n   subtraction\n   multiplication\n   division\n   exponents\n   square root\n   nth root\n   logarithm\n   modulo\n   sine\n   cosine\n   tangent\n   cotangent\n   secant\n")
+print("\n   addition\n   subtraction\n   multiplication\n   division\n   exponents\n   square root\n   nth root\n   logarithm\n   modulo\n   sine\n   cosine\n   tangent\n   cotangent\n   secant\n")
 
 
 while True:
     # User input
-    choice = input("Enter operation's name: ")
+    choice = input("\nEnter operation's name: ")
 
 
     #2 choice ###################################
@@ -63,7 +63,7 @@ while True:
             x = float(math.pi)
 
         if y == "pi":
-            x = float(math.pi)
+            y = float(math.pi)
 
         x = float(x)
         y = float(y)
