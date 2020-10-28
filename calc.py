@@ -78,9 +78,9 @@ while True:
             x = float(math.e)
 
 
-        if x == tau
+        if x == "tau":
             x = float(math.tau)
-        if y == tau
+        if y == "tau":
             y = float(math.tau)
 
 #        try:
