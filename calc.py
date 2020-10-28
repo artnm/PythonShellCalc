@@ -17,7 +17,7 @@ def divide(x, y):
 def exponent(x, y):
     return (x ** y)
 
-def sqrt(x):
+def sqrt(x): #lmfao wtf is this logic lmaooo how does this not just return x ahahahhaa
     return(x)**(1/2)
 
 def nthroot(x, y):
@@ -53,25 +53,38 @@ def isinfinite(x):
 def isNaN(x):
     return mpmath.isnan(x)
 
-print("Select an operation:\n")
-multiline_str = ("\n   addition (+)\n   subtraction (-)\n   multiplication (*)\n   division (/)\n"
-   "   exponents (^)\n   square root (sqrt)\n   nth root (nthroot)\n   logarithm (log)\n   modulo (mod)\n"
-   "   sine (sin)\n   cosine (cos)\n   tangent (tan)\n   cotangent (cot)\n   secant (sec)\n   cosecant (csc)\n"
-   "   is infinite (isinf)\n   is not-a-number (isNaN)")
+def absVal(x):
+    return mpmath.fabs(x)
+
+def floor(x):
+    return mpmath.floor(x)
+
+def ceil(x):
+    return mpmath.ceil(x)
+
+def nInt(x):
+    return mpmath.nint(x)
+
+print("\n Select an operation:\n")
+multiline_str = ("\n    addition (+)\n    subtraction (-)\n    multiplication (*)\n    division (/)\n"
+   "    exponents (^)\n    square root (sqrt)\n    nth root (nthroot)\n    logarithm (log)\n    modulo (mod)\n"
+   "    sine (sin)\n    cosine (cos)\n    tangent (tan)\n    cotangent (cot)\n    secant (sec)\n    cosecant (csc)\n"
+   "    is infinite (isinf)\n    is not-a-number (isNaN)\n    absolute value (abs)\n    floor (floor)\n    ceiling (ceil)\n"
+   "    nearest integer (nint)\n")
 
 print(multiline_str)
 
 while True:
     # User input
     print("\n")
-    choice = input("Enter operation's name: ")
+    choice = input(" Enter operation name: ")
 
 
     #2 choice ###################################
     # Check if choice is one of the options
     if choice in ("+", "-", "*", "/", "^", "nthroot", "log", "mod"):
-        x = str(input("Enter first number: "))
-        y = str(input("Enter second number: "))
+        x = str(input(" Enter first number: "))
+        y = str(input(" Enter second number: "))
 
         if x == "pi":
             x = float(math.pi)
@@ -79,6 +92,9 @@ while True:
             x = float(math.e)
         if x == "tau":
             x = float(math.tau)
+        if x == "phi":
+            x = float(mpmath.phi)
+
 
         if y == "pi":
             y = float(math.pi)
@@ -86,72 +102,86 @@ while True:
             y = float(math.e)
         if y == "tau":
             y = float(math.tau)
+        if y == "phi":
+            y = float(mpmath.phi)
 
 
         x = float(x)
         y = float(y)
 
         if choice == "+":
-            print("\n ", x, "+", y, "=", add(x, y))
+            print("\n   ", x, "+", y, "=", add(x, y))
 
         elif choice == "-":
-            print("\n ", x, "-", y, "=", subtract(x, y))
+            print("\n   ", x, "-", y, "=", subtract(x, y))
 
         elif choice == "*":
-            print("\n ", x, "*", y, "=", multiply(x, y))
+            print("\n   ", x, "*", y, "=", multiply(x, y))
 
         elif choice == "/":
-            print("\n ", x, "/", y, "=", divide(x, y))
+            print("\n   ", x, "/", y, "=", divide(x, y))
 
         elif choice == "^":
-            print("\n ", x, "^", y, "=", exponent(x, y))
+            print("\n   ", x, "^", y, "=", exponent(x, y))
 
         elif choice == "nthroot":
-            print("\n ", "^", x, "√", y, "=", nthroot(x, y))
+            print("\n   ", "^", x, "√", y, "=", nthroot(x, y))
 
         elif choice == "log":
-            print("\n ", f'log({x} [, {y}]) = ', log(x, y)) #THANK YOU CAFF!!!
+            print("\n   ", f'log({x} [, {y}]) = ', log(x, y)) #THANK YOU CAFF!!!
 
         elif choice == "mod":
-            print("\n ", x, "%", y, "=", modulo(x, y))
+            print("\n   ", x, "%", y, "=", modulo(x, y))
 
         else:
-            print("Invalid Input")
+            print(" Invalid Input")
 
 
 #1 choice ####################
-    if choice in ("sqrt", "sin", "cos", "tan", "cot", "sec", "csc", "isinf", "isNaN"):
-        x = float(input("Enter first number: "))
+    if choice in ("sqrt", "sin", "cos", "tan", "cot", "sec", "csc", "isinf", "isNaN", "abs", "floor", "ceil", "nint"):
+        x = float(input(" Enter first number: "))
 
         if choice == "sqrt":
-            print("\n ","√", x, "=", sqrt(x))
+            print("\n   ","√", x, "=", sqrt(x))
 
         elif choice == "sin":
-            print("\n ", f'sin({x}) = ', sine(x))
+            print("\n   ", f'sin({x}) = ', sine(x))
 
         elif choice == "cos":
-            print("\n ", f'cos({x}) = ', cosine(x))
+            print("\n   ", f'cos({x}) = ', cosine(x))
 
         elif choice == "tan":
-            print("\n ", f'tan({x}) = ', tangent(x))
+            print("\n   ", f'tan({x}) = ', tangent(x))
 
         elif choice == "cot":
-            print("\n ", f'cot({x}) = ', cotangent(x))
+            print("\n   ", f'cot({x}) = ', cotangent(x))
 
         elif choice == "sec":
-            print("\n ", f'sec({x}) = ', secant(x))
+            print("\n   ", f'sec({x}) = ', secant(x))
 
         elif choice == "csc":
-            print("\n ", f'csc({x}) = ', cosecant(x))
+            print("\n   ", f'csc({x}) = ', cosecant(x))
 
         elif choice == "isinf":
-            print("\n ", f'isinf({x}) = ', isinfinite(x))
+            print("\n   ", f'isinf({x}) = ', isinfinite(x))
 
         elif choice == "isNaN":
-            print("\n ", f'isNaN({x}) = ', isNaN(x))
+            print("\n   ", f'isNaN({x}) = ', isNaN(x))
+
+        elif choice == "abs":
+            print("\n   ", f'abs({x}) = ', absVal(x))
+
+        elif choice == "floor":
+            print("\n   ", f'floor({x}) = ', floor(x))
+
+        elif choice == "ceil":
+            print("\n   ", f'ceil({x}) = ', ceil(x))
+
+        elif choice == "nint":
+            print("\n   ", f'nint({x}) = ', nInt(x))
 
         else:
-            print("Invalid Input")
+            print(" Invalid Input")
 
             positive_infnity = float('inf')
             print(positive_infnity)
