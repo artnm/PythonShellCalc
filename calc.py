@@ -68,9 +68,20 @@ while True:
 
         if x == "pi":
             x = float(math.pi)
-
         if y == "pi":
             y = float(math.pi)
+
+
+        if x == "e":
+            x = float(math.e)
+        if y == "e":
+            x = float(math.e)
+
+
+        if x == tau
+            x = float(math.tau)
+        if y == tau
+            y = float(math.tau)
 
 #        try:
 #            x = float(x)
