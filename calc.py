@@ -84,28 +84,28 @@ while True:
 
 
         if choice == "addition":
-            print(" ", x, "+", y, "=", add(x, y))
+            print("\n ", x, "+", y, "=", add(x, y))
 
         elif choice == "subtraction":
-            print(" ", x, "-", y, "=", subtract(x, y))
+            print("\n ", x, "-", y, "=", subtract(x, y))
 
         elif choice == "multiplication":
-            print(" ", x, "*", y, "=", multiply(x, y))
+            print("\n ", x, "*", y, "=", multiply(x, y))
 
         elif choice == "division":
-            print(" ", x, "/", y, "=", divide(x, y))
+            print("\n ", x, "/", y, "=", divide(x, y))
 
         elif choice == "exponents":
-            print(" ", x, "^", y, "=", exponent(x, y))
+            print("\n ", x, "^", y, "=", exponent(x, y))
 
         elif choice == "nth root":
-            print(" ", "^", x, "√", y, "=", nthroot(x, y))
+            print("\n ", "^", x, "√", y, "=", nthroot(x, y))
 
         elif choice == "logarithm":
-            print(" ", f'log({x} [, {y}]) = ', log(x, y)) #THANK YOU CAFF!!!
+            print("\n ", f'log({x} [, {y}]) = ', log(x, y)) #THANK YOU CAFF!!!
 
         elif choice == "modulo":
-            print(" ", x, "%", y, "=", modulo(x, y))
+            print("\n ", x, "%", y, "=", modulo(x, y))
 
         else:
             print("Invalid Input")
@@ -116,25 +116,25 @@ while True:
         x = float(input("Enter first number: "))
 
         if choice == "square root":
-            print(" ","√", x, "=", sqrt(x))
+            print("\n ","√", x, "=", sqrt(x))
 
         elif choice == "sine":
-            print(" ", f'sin({x}) = ', sine(x))
+            print("\n ", f'sin({x}) = ', sine(x))
 
         elif choice == "cosine":
-            print(" ", f'cos({x}) = ', cosine(x))
+            print("\n ", f'cos({x}) = ', cosine(x))
 
         elif choice == "tangent":
-            print(" ", f'tan({x}) = ', tangent(x))
+            print("\n ", f'tan({x}) = ', tangent(x))
 
         elif choice == "cotangent":
-            print(" ", f'cot({x}) = ', cotangent(x))
+            print("\n ", f'cot({x}) = ', cotangent(x))
 
         elif choice == "secant":
-            print(" ", f'sec({x}) = ', secant(x))
+            print("\n ", f'sec({x}) = ', secant(x))
 
         elif choice == "cosecant":
-            print(" ", f'csc({x}) = ', cosecant(x))
+            print("\n ", f'csc({x}) = ', cosecant(x))
 
         else:
             print("Invalid Input")
