@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import math
 
 import mpmath
@@ -47,6 +50,25 @@ def secant(x):
 def cosecant(x):
     return mpmath.csc(x)
 
+def inputLoopX(x):
+    try:
+        x = float(x)
+    except ValueError:
+        print("Your first number is invalid. Please enter a valid number.")
+        x = str(input("Enter first number: "))
+        inputLoopX(x)
+
+def inputLoopY(y):
+
+    try:
+        y = float(y)
+    except ValueError:
+        print("Your second number is invalid. Please enter a valid number.")
+        y = str(input("Enter second number: "))
+        inputLoopY(y)
+
+
+
 print("Select an operation:\n")
 multiline_str = ("\n   addition\n   subtraction\n   multiplication\n   division\n"
    "   exponents\n   square root\n   nth root\n   logarithm\n   modulo\n"
@@ -63,36 +85,24 @@ while True:
     #2 choice ###################################
     # Check if choice is one of the options
     if choice in ("addition", "subtraction", "multiplication", "division", "exponents", "nth root", "logarithm", "modulo"):
-        x = str(input("Enter first number: "))
-        y = str(input("Enter second number: "))
 
+        x = str(input("Enter first number: "))
         if x == "pi":
             x = float(math.pi)
-        if y == "pi":
-            y = float(math.pi)
-
-
         if x == "e":
             x = float(math.e)
-        if y == "e":
-            x = float(math.e)
-
-
         if x == "tau":
             x = float(math.tau)
+        inputLoopX(x)
+
+        y = str(input("Enter second number: "))
+        if y == "pi":
+            y = float(math.pi)
+        if y == "e":
+            x = float(math.e)
         if y == "tau":
             y = float(math.tau)
-
-#        try:
-#            x = float(x)
-#        except:
-#            print("Your first number is invalid. Please enter a valid number.")
-#            x = str(input("Enter first number: "))
-#            y = float(y)
-#        except:
-#            print("Your first number is invalid. Please enter a valid number.")
-#            y = str(input("Enter second number: "))
-
+        inputLoopY(y)
 
         if choice == "addition":
             print("\n ", x, "+", y, "=", add(x, y))
