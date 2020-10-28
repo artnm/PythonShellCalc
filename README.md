@@ -30,7 +30,7 @@ Current operations are:
 • This program supports pi as "pi", to available precision. <br />
 • This program supports e as "e", to available precision. <br />
 • This program supports tau as "tau", to available precision. <br />
-• This program supports the golden ratio/phi as "phi", to available precision.
+• This program supports the golden ratio/phi as "phi", to available precision. <br />
 • This program supports infinity and negative infinity as "inf" and "-inf".
 
 Huge thanks to the homeboy CaffeineMeme for helping me out with a couple things here and there, his support is very much appreciated.
