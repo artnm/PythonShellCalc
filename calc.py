@@ -68,6 +68,31 @@ def nInt(x):
 def factorial(x):
     return mpmath.factorial(x)
 
+def reinputNum(num):
+    if num == "pi":
+        num = float(math.pi)
+        return float(num)
+    elif num == "e":
+        num = float(math.e)
+        return float(num)
+    elif num == "tau":
+        num = float(math.tau)
+        return float(num)
+    elif num == "phi":
+        num = float(mpmath.phi)
+        return float(num)
+
+    print(type(num))
+
+    while True:
+        try:
+            num = float(num)
+            return float(num)
+        except ValueError:
+            print("That ain't valid nigga, put something that works you dumb fucking retard.")
+            num = input("Re-enter your number: ")
+
+
 print("\n Select an operation:\n")
 multiline_str = ("\n    addition (+)\n    subtraction (-)\n    multiplication (*)\n    division (/)\n"
    "    exponents (^)\n    square root (sqrt)\n    nth root (nthroot)\n    logarithm (log)\n    modulo (mod)\n"
@@ -86,31 +111,12 @@ while True:
     #2 choice ###################################
     # Check if choice is one of the options
     if choice in ("+", "-", "*", "/", "^", "nthroot", "log", "mod"):
-        x = str(input(" Enter first number: "))
-        y = str(input(" Enter second number: "))
+        x = input(" Enter first number: ")
+        x = reinputNum(x)
 
-        if x == "pi":
-            x = float(math.pi)
-        if x == "e":
-            x = float(math.e)
-        if x == "tau":
-            x = float(math.tau)
-        if x == "phi":
-            x = float(mpmath.phi)
+        y = input(" Enter second number: ")
+        y = reinputNum(y)
 
-
-        if y == "pi":
-            y = float(math.pi)
-        if y == "e":
-            y = float(math.e)
-        if y == "tau":
-            y = float(math.tau)
-        if y == "phi":
-            y = float(mpmath.phi)
-
-
-        x = float(x)
-        y = float(y)
 
         if choice == "+":
             print("\n   ", x, "+", y, "=", add(x, y))
