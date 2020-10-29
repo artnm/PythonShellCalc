@@ -23,7 +23,8 @@ Current operations are:
 • absolute value <br />
 • floor <br />
 • ceiling <br />
-• nearest integer
+• nearest integer <br />
+• factorial
 
 
 

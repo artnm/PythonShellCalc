@@ -65,12 +65,15 @@ def ceil(x):
 def nInt(x):
     return mpmath.nint(x)
 
+def factorial(x):
+    return mpmath.factorial(x)
+
 print("\n Select an operation:\n")
 multiline_str = ("\n    addition (+)\n    subtraction (-)\n    multiplication (*)\n    division (/)\n"
    "    exponents (^)\n    square root (sqrt)\n    nth root (nthroot)\n    logarithm (log)\n    modulo (mod)\n"
    "    sine (sin)\n    cosine (cos)\n    tangent (tan)\n    cotangent (cot)\n    secant (sec)\n    cosecant (csc)\n"
    "    is infinite (isinf)\n    is not-a-number (isNaN)\n    absolute value (abs)\n    floor (floor)\n    ceiling (ceil)\n"
-   "    nearest integer (nint)\n")
+   "    nearest integer (nint)\n    factorial (fac)")
 
 print(multiline_str)
 
@@ -138,7 +141,7 @@ while True:
 
 
 #1 choice ####################
-    if choice in ("sqrt", "sin", "cos", "tan", "cot", "sec", "csc", "isinf", "isNaN", "abs", "floor", "ceil", "nint"):
+    if choice in ("sqrt", "sin", "cos", "tan", "cot", "sec", "csc", "isinf", "isNaN", "abs", "floor", "ceil", "nint", "fac"):
         x = float(input(" Enter first number: "))
 
         if choice == "sqrt":
@@ -179,6 +182,9 @@ while True:
 
         elif choice == "nint":
             print("\n   ", f'nint({x}) = ', nInt(x))
+
+        elif choice == "fac":
+            print("\n   ", f'fac({x}) = ', factorial(x))
 
         else:
             print(" Invalid Input")
