@@ -89,8 +89,8 @@ def reinputNum(num):
             num = float(num)
             return float(num)
         except ValueError:
-            print("That ain't valid nigga, put something that works you dumb fucking retard.")
-            num = input("Re-enter your number: ")
+            print(" Invalid input")
+            num = input(" Re-enter your number: ")
 
 
 print("\n Select an operation:\n")
