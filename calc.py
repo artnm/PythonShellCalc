@@ -149,6 +149,7 @@ while True:
 #1 choice ####################
     if choice in ("sqrt", "sin", "cos", "tan", "cot", "sec", "csc", "isinf", "isNaN", "abs", "floor", "ceil", "nint", "fac"):
         x = float(input(" Enter first number: "))
+        x = reinputNum(x)
 
         if choice == "sqrt":
             print("\n   ","√", x, "=", sqrt(x))
