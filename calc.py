@@ -82,7 +82,7 @@ def reinputNum(num):
         num = float(mpmath.phi)
         return float(num)
 
-    print(type(num))
+    #print(type(num)) ----------------- dont use rn
 
     while True:
         try:
@@ -143,7 +143,7 @@ while True:
             print("\n   ", x, "%", y, "=", modulo(x, y))
 
         else:
-            print(" Invalid Input")
+            print(" Invalid Input.")
 
 
 #1 choice ####################
@@ -193,7 +193,7 @@ while True:
             print("\n   ", f'fac({x}) = ', factorial(x))
 
         else:
-            print(" Invalid Input")
+            print(" Invalid Input.")
 
             positive_infnity = float('inf')
             print(positive_infnity)
